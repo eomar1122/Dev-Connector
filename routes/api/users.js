@@ -15,14 +15,14 @@ const validateLoginInput = require('../../validation/login');
 const User = require('../../models/User');
 
 
-// @ route   Get api/users/test
+// @route    GET api/users/test
 // @desc     Tests user route
 // @access   Public
 router.get('/test', (req, res) => {
   res.json({msg: "Users Works"});
 });
 
-// @ route   Get api/users/register
+// @route    POST api/users/register
 // @desc     Register user
 // @access   Public
 router.post('/register', (req, res) => {
@@ -72,7 +72,7 @@ router.post('/register', (req, res) => {
   })
 });
 
-// @route    Get api/users/login
+// @route    POST api/users/login
 // @desc     Login user / Returning JWT Token
 // @access   Public
 router.post('/login', (req, res) => {
@@ -122,7 +122,7 @@ router.post('/login', (req, res) => {
   });
 });
 
-// @ route   Get api/users/current
+// @route    GET api/users/current
 // @desc     Return current user
 // @access   Private
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
