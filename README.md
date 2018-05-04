@@ -1,5 +1,6 @@
 # devconnector
 
+MERN application: Social network for developers to create account, profile, add post, and comment on posts.
 
 
 ## Technologies
@@ -12,6 +13,8 @@
 - react-redux
 - redux-thunk
 - jwt-decode
+- Moment
+- React-moment
 - Express
 - Body Parser
 - Mongoose
