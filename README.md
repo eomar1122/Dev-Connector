@@ -1,6 +1,6 @@
 # devconnector
 
-MERN application: Social network for developers to create account, profile, add post, and comment on posts.
+MERN application: Social network for developers to create account, profile, add experience, add education, add post, and comment on posts.
 
 
 ## Technologies
