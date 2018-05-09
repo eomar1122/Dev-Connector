@@ -8,20 +8,17 @@ const opts = {};
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
-module.exports = (passport) => {
+module.exports = passport => {
   passport.use(
     new JwtStrategy(opts, (jwt_payload, done) => {
-      // console.log(jwt_payload);
       User.findById(jwt_payload.id)
         .then(user => {
-          if(user) {
-            // If there is a user
+          if (user) {
             return done(null, user);
           }
-          // If there is no user
           return done(null, false);
         })
         .catch(err => console.log(err));
     })
-  )
-}
+  );
+};
