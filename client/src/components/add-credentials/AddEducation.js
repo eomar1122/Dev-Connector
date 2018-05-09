@@ -63,7 +63,7 @@ class AddEducation extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="add-Education">
+      <div className="add-education">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -72,7 +72,7 @@ class AddEducation extends Component {
               </Link>
               <h1 className="display-4 text-center">Add Education</h1>
               <p className="lead text-center">
-                Add any job or position that you have had in the past or current
+                Add any school, bootcamp, etc that you have attended
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
@@ -134,7 +134,7 @@ class AddEducation extends Component {
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the program that you are in"
+                  info="Tell us about the program that you were in"
                 />
                 <input
                   type="submit"

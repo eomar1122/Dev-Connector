@@ -14,7 +14,6 @@ class Education extends Component {
       <tr key={edu._id}>
         <td>{edu.school}</td>
         <td>{edu.degree}</td>
-        <td>{edu.fieldofstudy}</td>
         <td>
           <Moment format="YYYY/MM/DD">{edu.from}</Moment> -
           {edu.to === null ? (
@@ -41,7 +40,6 @@ class Education extends Component {
             <tr>
               <th>School</th>
               <th>Degree</th>
-              <th>Field of Study</th>
               <th>Years</th>
               <th />
             </tr>
